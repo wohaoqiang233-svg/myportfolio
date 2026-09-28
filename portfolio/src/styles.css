@@ -1,0 +1,110 @@
+@import "@fontsource-variable/space-grotesk";
+@import "@fontsource-variable/hanken-grotesk";
+@import "@fontsource-variable/jetbrains-mono";
+@import "tailwindcss";
+
+@theme {
+  --color-canvas: #101214;
+  --color-panel: #181c1f;
+  --color-deep: #0c0e10;
+  --color-line: #303539;
+  --color-ink: #f1efe7;
+  --color-muted: #abb0b5;
+  --color-pink: #ea437f;
+  --color-softpink: #ffb1c4;
+  --color-indigo: #384579;
+  --color-periwinkle: #b7c4ff;
+  --color-lime: #c9de87;
+  --font-display: "Space Grotesk Variable", "Microsoft YaHei", sans-serif;
+  --font-body: "Hanken Grotesk Variable", "Microsoft YaHei", sans-serif;
+  --font-mono: "JetBrains Mono Variable", monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+  }
+  body {
+    margin: 0;
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  ::selection {
+    background: var(--color-pink);
+    color: var(--color-canvas);
+  }
+  button,
+  a,
+  summary {
+    -webkit-tap-highlight-color: transparent;
+  }
+  button,
+  summary {
+    cursor: pointer;
+  }
+  a,
+  button,
+  summary {
+    transition:
+      color 0.18s,
+      background-color 0.18s,
+      border-color 0.18s;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-lime);
+    outline-offset: 5px;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+  img {
+    max-width: 100%;
+  }
+  summary {
+    list-style: none;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  dialog::backdrop {
+    background: rgb(0 0 0 / 0.88);
+  }
+}
+@layer components {
+  .shell {
+    @apply mx-auto w-full max-w-[1440px] px-6 lg:px-12;
+  }
+  .eyebrow {
+    @apply font-mono text-xs leading-relaxed tracking-[.07em] uppercase;
+  }
+  .section-title {
+    @apply font-display text-3xl leading-tight font-bold tracking-tight lg:text-[40px];
+  }
+  .button-primary {
+    @apply inline-flex min-h-12 items-center justify-center gap-4 border border-transparent bg-ink px-6 py-3 font-display font-semibold text-canvas hover:bg-softpink;
+  }
+  .button-secondary {
+    @apply inline-flex min-h-12 items-center justify-center gap-3 border border-line bg-panel px-5 py-3 font-medium text-ink hover:border-pink;
+  }
+  .section-space {
+    @apply py-12 lg:py-16;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0s !important;
+    animation-duration: 0s !important;
+  }
+}

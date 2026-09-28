@@ -1,0 +1,5 @@
+# Only the runnable website is versioned; workshop materials stay local.
+/*
+!/.gitignore
+!/portfolio/
+!/vercel.json

@@ -1,0 +1,26 @@
+{
+  "home": [
+    "/assets/stitch/home-1.jpg",
+    "/assets/stitch/home-2.jpg",
+    "/assets/stitch/home-3.jpg",
+    "/assets/stitch/home-4.jpg"
+  ],
+  "reclimb": [
+    "/assets/stitch/reclimb-1.jpg",
+    "/assets/stitch/reclimb-2.jpg",
+    "/assets/stitch/reclimb-3.jpg"
+  ],
+  "food": [
+    "/assets/stitch/food-1.jpg",
+    "/assets/stitch/food-2.jpg",
+    "/assets/stitch/food-3.jpg",
+    "/assets/stitch/food-4.jpg"
+  ],
+  "judge": ["/assets/stitch/judge-1.jpg", "/assets/stitch/judge-2.jpg"],
+  "plant": [
+    "/assets/stitch/plant-1.jpg",
+    "/assets/stitch/plant-2.jpg",
+    "/assets/stitch/plant-3.jpg",
+    "/assets/stitch/plant-4.jpg"
+  ]
+}
